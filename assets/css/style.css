@@ -15,7 +15,6 @@
   z-index: -1;
 }
 
-
 /* General Body Settings */
 body {
   margin: 0;
@@ -125,7 +124,7 @@ footer a:hover {
 /* Services Section */
 .services-section {
   position: relative;
-  background-image: url("../images/mro_baner_1.png");
+  background-image: url("../../img/AGRO_PACKING.jpg");
   background-size: cover;
   background-position: center;
   padding: 80px 0;
@@ -251,4 +250,36 @@ footer a:hover {
   h2.section-title {
     font-size: 2rem;
   }
+}
+
+/* page header background css */
+.page-header {
+  background: url("../images/mro_baner_1.png") no-repeat center center;
+  background-size: cover;
+  padding: 3rem 0;
+  color: white; /* optional: for white text */
+}
+
+.page-header h1,
+.page-header .breadcrumb a,
+.page-header .breadcrumb-item.active {
+  color: white; /* optional: white text for visibility */
+}
+
+.page-header .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.7); /* optional: breadcrumb separator color */
+}
+
+/* Optional overlay effect */
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 0;
+}
+
+.page-header > .container {
+  position: relative;
+  z-index: 1;
 }

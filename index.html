@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PEP TECHNOLOGY - Home Page</title>
+    <title>Shree Chamunda Bags - Home Page</title>
     <!-- bootstrap icnos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- bootstrap css --> 
+    <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- AOS CSS --> 
+    <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -33,6 +33,52 @@
         }
     </style>
 
+    <style>
+        .review-card {
+            background: linear-gradient(135deg, #f0f7ff 0%, #d9e9ff 100%);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+            border: 1px solid #c2d1f0;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 25px rgba(50, 100, 200, 0.25);
+            border-color: #6394ff;
+        }
+
+        .stars {
+            color: #ffd700;
+            /* gold */
+            font-size: 1.2rem;
+            user-select: none;
+            letter-spacing: 3px;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+        }
+
+        p.fst-italic {
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #2c3e50;
+        }
+
+        h6.text-primary {
+            font-size: 1rem;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 576px) {
+            .review-card {
+                font-size: 0.9rem;
+            }
+
+            .stars {
+                font-size: 1rem;
+                letter-spacing: 2px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -40,7 +86,8 @@
     <!-- header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" data-aos="fade-down" data-aos-duration="1000">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">PEP TECHNOLOGY</a>
+            <a class="navbar-brand" href="index.php">SHREE CHAMUNDA BAGS </a>
+            <!-- <a href="index.php"><img src="assets/images/" height="70px" width="100px" alt=""></a> -->
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -51,316 +98,305 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">About</a>
+                        <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Products
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">MRO products </a></li>
+                            <li><a class="dropdown-item" href="agro_packing.php">AGRO PACKING</a></li>
+                            <li><a class="dropdown-item" href="hawder_packing.php">HAWDER PACKING</a></li>
+                            <li><a class="dropdown-item" href="agro_packing.php">TEA PACKING</a></li>
+                            <li><a class="dropdown-item" href="agro_packing.php">SPICES PACKING</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Services</a>
+                        <a class="nav-link" href="services.php">Services</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="">Contact</a>
+                        <a class="nav-link" href="contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-<!-- carousel -->
-<div id="carouselExample" class="carousel slide position-relative overflow-hidden" data-bs-ride="carousel" data-bs-interval="2000">
-    
-    <!-- 🔳 Dark Overlay -->
-    <div class="carousel-overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+    <!-- carousel -->
+    <div id="carouselExample" class="carousel slide position-relative overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
 
-    <!-- 🖼 Carousel Inner -->
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="assets/images/mro_baner_4.jpg" class="d-block w-100 object-fit-cover" style="height:600px;" alt="...">
+        <!-- 🔳 Dark Overlay -->
+        <div class="carousel-overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+        <!-- 🖼 Carousel Inner with Your Product Banners -->
+        <div class="carousel-inner">
+
+            <!-- 🔸 Spices Packing -->
+            <div class="carousel-item active">
+                <img src="img/baner_1.jpg" class="d-block w-100 object-fit-cover" style="height:600px;" alt="Spices Packing">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center h-100 position-absolute top-0 start-0 w-100" style="z-index: 2;">
+                    <h2 class="text-white fw-bold display-4">Spices Packing</h2>
+                    <p class="text-white fs-5">Freshness locked. Aroma sealed. Quality delivered.</p>
+                </div>
+            </div>
+
+            <!-- 🔸 Tea Packing -->
+            <div class="carousel-item">
+                <img src="img/baner_2.webp" class="d-block w-100 object-fit-cover" style="height:600px;" alt="Tea Packing">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center h-100 position-absolute top-0 start-0 w-100" style="z-index: 2;">
+                    <h2 class="text-white fw-bold display-4">Tea Packing</h2>
+                    <p class="text-white fs-5">Preserving flavor and freshness, one cup at a time.</p>
+                </div>
+            </div>
+
+            <!-- 🔸 Agro Packing -->
+            <div class="carousel-item">
+                <img src="img/baner_3.jpg" class="d-block w-100 object-fit-cover" style="height:600px;" alt="Agro Packing">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center h-100 position-absolute top-0 start-0 w-100" style="z-index: 2;">
+                    <h2 class="text-white fw-bold display-4">Agro Packing</h2>
+                    <p class="text-white fs-5">Strong, sustainable solutions for agricultural needs.</p>
+                </div>
+            </div>
+
         </div>
-        <div class="carousel-item">
-            <img src="assets/images/mro_baner_5.jpg" class="d-block w-100 object-fit-cover" style="height:600px;" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/images/mro_baner_6.jpg" class="d-block w-100 object-fit-cover" style="height:600px;" alt="...">
-        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-primary rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-primary rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
-    <!-- 📝 Text + Logo Overlay -->
-    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center h-100 position-absolute top-0 start-0 w-100" style="z-index: 2;">
-        <!-- <img src="assets/images/logo.png" alt="PEP Logo" style="width: 100px; height: auto; margin-bottom: 20px;"> -->
-        <h2 class="text-white fw-bold display-4">Welcome to PEP Technology</h2>
-        <p class="text-white fs-5">Engineering solutions that power progress across industries.</p>
-    </div>
+    <!-- About us -->
+    <section class="company-section">
+        <div class="container">
+            <h2 class="text-center">About Us</h2>
+            <p class="text-center">SHREE CHAMUNDA BAGS is a trusted name in the packaging industry, offering high-quality and durable packing solutions for agricultural produce, spices, and tea. With a strong focus on innovation and customer satisfaction, we deliver excellence in every bag.</p>
 
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-primary rounded-circle p-2" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-primary rounded-circle p-2" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
+            <div class="row align-items-center">
+                <!-- Image Column -->
+                <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+                    <img src="img/AGRO_PACKING.jpg" alt="Shree Chamunda Bags Image" class="company-img">
+                </div>
 
+                <!-- Content Column -->
+                <div class="col-md-6" data-aos="fade-left">
+                    <h2>Our Products & Expertise</h2>
+                    <p>At SHREE CHAMUNDA BAGS, we specialize in manufacturing and supplying top-grade packaging solutions tailored to meet the diverse needs of the agro, spice, and tea industries. Our products are known for their strength, design versatility, and reliability.</p>
 
+                    <ul>
+                        <li>Agro Product Packaging Bags</li>
+                        <li>Spices Packaging Solutions</li>
+                        <li>Tea Packing Bags with Aroma Lock</li>
+                        <li>Customized Branding & Sizes</li>
+                        <li>Eco-Friendly & Durable Materials</li>
+                    </ul>
 
-<!-- About us -->
-<section class="company-section">
-  <div class="container">
-        <h2 class="text-center">About Us</h2>
-<p class="text-center">PEP Technology is a leading provider of innovative engineering solutions, specializing in precision, efficiency, and performance across industries.</p>
-    <div class="row align-items-center">
-      <!-- Image Column -->
-      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
-        <img src="assets/images/mro_baner_1.png" alt="Pep Technology Image" class="company-img">
-      </div>
-
-      <!-- Content Column -->
-      <div class="col-md-6" data-aos="fade-left">
-        <h2>Pep Technology and Products</h2>
-        <p>We are a leading manufacturer and exporter of high-quality MRO (Maintenance, Repair, and Operations) products, delivering value across industries with cutting-edge solutions and professional-grade reliability.</p>
-        
-        <ul>
-          <li>Industrial-Grade MRO Products</li>
-          <li>Custom Solutions & OEM Supply</li>
-          <li>Global Export Services</li>
-          <li>ISO Certified Manufacturing</li>
-        </ul>
-        
-        <button class="read-more-btn mt-3">Read More</button>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End About us -->
-
-<!-- services sections -->
- <section class="services-section">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
-
-    <div class="row g-4">
-      
-      <!-- Card 1 -->
-      <div class="col-md-4">
-        <div class="service-card text-center">
-          <i class="fas fa-oil-can"></i>
-          <h5>Industrial Lubricants</h5>
-          <p>High-performance oils and greases to ensure machinery runs smoothly and efficiently.</p>
+                    <button class="read-more-btn mt-3">
+                        <a href="about.php" class="text-dark text-decoration-none">Read More</a>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+    <!-- End About us -->
 
-      <!-- Card 2 -->
-      <div class="col-md-4">
-        <div class="service-card text-center">
-          <i class="fas fa-plug-circle-bolt"></i>
-          <h5>Electrical Components</h5>
-          <p>We supply switches, cables, connectors, and more for industrial electrical systems.</p>
+    <!-- services sections -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fas fa-seedling"></i>
+                        <h5>Agro Product Packaging</h5>
+                        <p>Durable and cost-effective packaging solutions for grains, pulses, fertilizers, and other agricultural products.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fas fa-pepper-hot"></i>
+                        <h5>Spices Packaging</h5>
+                        <p>Moisture-resistant and aroma-lock packaging designed to preserve the freshness of spices during storage and transport.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fas fa-mug-hot"></i>
+                        <h5>Tea Packing Solutions</h5>
+                        <p>Specialized tea packaging bags that retain flavor, fragrance, and freshness, available in various sizes and materials.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fas fa-box-open"></i>
+                        <h5>Custom Packaging Design</h5>
+                        <p>Get packaging bags customized with your brand logo, color scheme, and product-specific requirements.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fas fa-globe"></i>
+                        <h5>Export Services</h5>
+                        <p>We export high-quality packaging materials to clients across the globe, ensuring timely delivery and superior quality.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fas fa-recycle"></i>
+                        <h5>Eco-Friendly Packaging</h5>
+                        <p>Offering sustainable packaging options made from recyclable or biodegradable materials to support green initiatives.</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
+    </section>
+    <!-- end services -->
 
-      <!-- Card 3 -->
-      <div class="col-md-4">
-        <div class="service-card text-center">
-          <i class="fas fa-screwdriver-wrench"></i>
-          <h5>Fasteners & Fittings</h5>
-          <p>Bolts, nuts, washers, pipe fittings, and more – available in all industrial sizes.</p>
+    <!-- Products  -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="text-center">Our Packaging Products</h2>
+            <p class="text-center">
+                At SHREE CHAMUNDA BAGS, we specialize in manufacturing and supplying high-quality packaging solutions for the agro, spice, and tea industries. Our products are designed for durability, freshness retention, and superior presentation.
+            </p>
+
+            <div class="row justify-content-center text-center g-3">
+
+                <!-- Product 1: Agro Packing -->
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="product-card">
+                        <img src="img/agro_packing.jpg" alt="Agro Packing Bags">
+                        <div class="product-card-body">
+                            <h5>Agro Packing</h5>
+                            <button class="btn btn-primary">
+                                <a class="text-white text-decoration-none" href="agro_packing.php">View More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Spices Packing -->
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <img src="img/spices_packing.jpg" alt="Spices Packing Bags">
+                        <div class="product-card-body">
+                            <h5>Spices Packing</h5>
+                            <button class="btn btn-primary">
+                                <a class="text-white text-decoration-none" href="spices_packing.php">View More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Tea Packing -->
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <img src="img/Tea-Packaging.jpg" alt="Tea Packing Bags">
+                        <div class="product-card-body">
+                            <h5>Tea Packing</h5>
+                            <button class="btn btn-primary">
+                                <a class="text-white text-decoration-none" href="tea_packing.php">View More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4: HAWDER_PACKING -->
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <img src="img/HAWDER_PACKING.jpg" alt="Tea Packing Bags">
+                        <div class="product-card-body">
+                            <h5>HAWDER PACKING</h5>
+                            <button class="btn btn-primary">
+                                <a class="text-white text-decoration-none" href="tea_packing.php">View More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-md-4">
-        <div class="service-card text-center">
-          <i class="fas fa-hard-hat"></i>
-          <h5>Safety Equipment</h5>
-          <p>Protective wear, helmets, gloves, goggles, and other PPE for your workforce.</p>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="col-md-4">
-        <div class="service-card text-center">
-          <i class="fas fa-broom"></i>
-          <h5>Cleaning Supplies</h5>
-          <p>Industrial cleaning chemicals, mops, wipes, and janitorial products.</p>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="col-md-4">
-        <div class="service-card text-center">
-          <i class="fas fa-toolbox"></i>
-          <h5>Tools & Hardware</h5>
-          <p>Hand tools, power tools, toolkits, and maintenance gear for every need.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
- <!-- end services -->
-
-<!-- Products  -->
-<section class="products-section">
-  <div class="container">
-    <h2 class="text-center">Our MRO Products</h2>
-<p class="text-center">
-  Pep Technology delivers high-quality MRO products like lubricants, tools, and safety gear, ensuring reliable industrial performance as a trusted manufacturer and exporter.
-</p>
-
-    <div class="row justify-content-center text-center g-3">
-
-      <!-- Product 1 -->
-      <div class="col-md-3" data-aos="fade-up">
-        <div class="product-card">
-          <img src="assets/images/mro_products.jpg" alt="Bearing Grease">
-          <div class="product-card-body">
-            <h5>MRO Products</h5>
-            <button class="product-btn">View More</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- end products -->
+    </section>
+    <!-- end products -->
 
     <!-- FAQ Section -->
-<section class="faq-section container py-5 bg-white" data-aos="fade-up">
-    <div class="faq-header text-center mb-4">
-        <h2 class="text-primary">Frequently Asked Questions</h2>
-        <p class="text-muted">Have questions about our products? We’re here to help.</p>
-    </div>
-
-    <div class="accordion" id="faqAccordion">
-
-        <!-- FAQ 1 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faqOne">
-                <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                    What are MRO products and why are they important?
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    MRO stands for Maintenance, Repair, and Operations. These products ensure that industrial equipment and facilities continue running efficiently and safely.
-                </div>
-            </div>
+    <section class="faq-section container py-5 bg-white" data-aos="fade-up">
+        <div class="faq-header text-center mb-5">
+            <h2 class="text-primary fw-bold">Customer Reviews</h2>
+            <p class="text-muted fs-5">Here’s what our clients say about our packaging solutions.</p>
         </div>
 
-        <!-- FAQ 2 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faqTwo">
-                <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                    What MRO products does Pep Technology offer?
-                </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    We offer lubricants, fasteners, safety gear, electrical components, industrial tools, cleaning supplies, and more.
+        <div class="row g-4">
+
+            <!-- Review 1 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="review-card p-4 rounded shadow-sm h-100 position-relative">
+                    <div class="stars mb-3">
+                        ★★★★★
+                    </div>
+                    <p class="mb-3 fst-italic">"We’ve been sourcing agro product bags from Shree Chamunda Bags for over two years now. The quality is excellent, and they’ve always delivered on time."</p>
+                    <h6 class="text-primary fw-semibold mb-0">— Rakesh Patel, Agro Exporter, Gujarat</h6>
                 </div>
             </div>
-        </div>
 
-        <!-- FAQ 3 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faqThree">
-                <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                    Do you manufacture or source your products?
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    Pep Technology is both a manufacturer and exporter. We produce a wide range of MRO products in-house while also sourcing high-quality materials from trusted partners.
+            <!-- Review 2 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="review-card p-4 rounded shadow-sm h-100 position-relative">
+                    <div class="stars mb-3">
+                        ★★★★★
+                    </div>
+                    <p class="mb-3 fst-italic">"Their spice packing bags are sturdy, customizable, and lock in aroma perfectly. Highly recommended for any spice brand looking for premium packaging."</p>
+                    <h6 class="text-primary fw-semibold mb-0">— Meena Sharma, Spice Manufacturer, Rajasthan</h6>
                 </div>
             </div>
-        </div>
 
-        <!-- FAQ 4 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faqFour">
-                <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                    Do you export your products internationally?
-                </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    Yes, we export MRO products globally and comply with international quality and packaging standards.
+            <!-- Review 3 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="review-card p-4 rounded shadow-sm h-100 position-relative">
+                    <div class="stars mb-3">
+                        ★★★★★
+                    </div>
+                    <p class="mb-3 fst-italic">"The tea packaging bags we ordered were not only visually appealing but also maintained the freshness of the product during transit."</p>
+                    <h6 class="text-primary fw-semibold mb-0">— Ankit Desai, Tea Exporter, Assam</h6>
                 </div>
             </div>
-        </div>
 
-        <!-- FAQ 5 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faqFive">
-                <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-                    Can you provide custom MRO solutions based on our requirements?
-                </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    Absolutely. We offer customized solutions tailored to your industry’s specific maintenance and operational needs.
+            <!-- Review 4 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="review-card p-4 rounded shadow-sm h-100 position-relative">
+                    <div class="stars mb-3">
+                        ★★★★★
+                    </div>
+                    <p class="mb-3 fst-italic">"We needed eco-friendly custom printed bags for our organic grains. Shree Chamunda Bags delivered exactly what we needed — and in bulk."</p>
+                    <h6 class="text-primary fw-semibold mb-0">— Priya Nair, Organic Store Owner, Kerala</h6>
                 </div>
             </div>
-        </div>
 
-        <!-- FAQ 6 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faqSix">
-                <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
-                    How do you ensure the quality of your MRO products?
-                </button>
-            </h2>
-            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    Our products go through rigorous quality checks and are manufactured under ISO-compliant processes to ensure durability and reliability.
-                </div>
-            </div>
         </div>
-
-        <!-- FAQ 7 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faqSeven">
-                <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
-                    Do you offer bulk pricing or industrial supply contracts?
-                </button>
-            </h2>
-            <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    Yes, we provide competitive pricing for bulk orders and long-term supply agreements to support our industrial clients.
-                </div>
-            </div>
-        </div>
-
-        <!-- FAQ 8 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faqEight">
-                <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
-                    How can I place an order with Pep Technology?
-                </button>
-            </h2>
-            <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    You can place an order by contacting our sales team through email, phone, or by filling out the enquiry form on our website.
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
+    </section>
     <!-- end faq -->
 
     <!-- contact us  -->
@@ -378,10 +414,7 @@
                 <!-- Map Column -->
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="rounded-3 overflow-hidden shadow-sm">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3887.147622080863!2d80.10847807412121!3d13.026269763679279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sDoor%20number%2016%2C%20Plot%20no%2050%2C%20SouthKamachi%20Nagar%2C%20pattu%20koot%20road%2C%20Mangadu%2C%20Chennai%2C%20Tamil%20Nadu%20600122!5e0!3m2!1sen!2sin!4v1759145690954!5m2!1sen!2sin"
-                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.405350982843!2d70.78760167434342!3d22.262629944261697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca6759505fe7%3A0xe60cf28dd71a5a50!2sAnkur%20Nagar%20Main%20Rd%2C%20Rajkot%2C%20Gujarat%20360004!5e0!3m2!1sen!2sin!4v1760098072312!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 
@@ -414,78 +447,101 @@
             </div>
         </div>
     </section>
-<!-- end contact us -->
+    <!-- end contact us -->
 
-    <!-- Footer -->
- <footer class="pt-5 pb-4" data-aos="fade-up" data-aos-delay="100">
-    <div class="container text-center text-md-start">
-        <div class="row text-center text-md-start">
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Address Section -->
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt me-3"></i>
+                        Ankurnagar Main Road, Near Ankur Viddhyalay, Gujarat, INDIA 360004
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-phone-alt me-3"></i> +91 98242 37584 || +91 92277 00335
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-envelope me-3"></i> info@shreechamundabags.com
+                    </p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social me-2" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2" href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
 
-            <!-- Company Info -->
-            <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
-                <h5 class="text-uppercase fw-bold mb-4">PEP TECHNOLOGY</h5>
-               <p>PEP Technology is a leading provider of innovative engineering solutions, specializing in precision, efficiency, and performance across industries.</p>
-            </div>
+                <!-- Quick Links Section -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link text-light" href="index.php">Home</a><br />
+                    <a class="btn btn-link text-light" href="about.php">About</a><br />
+                    <a class="btn btn-link text-light" href="contact.php">Contact</a><br />
+                    <a class="btn btn-link text-light" href="service.php">Services</a><br />
+                    <a class="btn btn-link text-light" href="product.php">Products</a>
+                </div>
 
-            <!-- Products -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 class="text-uppercase fw-bold mb-4">Products</h6>
-                <ul class="list-unstyled">
-                    <li><a href="#">MRO Products </a></li>
-                </ul>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 class="text-uppercase fw-bold mb-4">Quick Links</h6>
-                <ul class="list-unstyled">
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                <p><i class="bi bi-house-door-fill me-2"></i>Door number 16, Plot no 50, SouthKamachi Nagar, pattu koot road, Mangadu, Chennai, Tamil Nadu 600122</p>
-                <p><i class="bi bi-envelope-fill me-2"></i>krishnakumar@peptechnology.in || peptechindia@yahoo.com</p>
-                <p><i class="bi bi-telephone-fill me-2"></i> +91 6381280180 || 8124091333</p>
+                <!-- Newsletter Section -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>We value integrity, clarity, and dedication in everything we do.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email" aria-label="Email for newsletter" />
+                        <button type="button" class="btn btn-dark py-2 position-absolute top-0 end-0 mt-2 me-2">
+                            SignUp
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Divider -->
-        <hr class="my-4">
-
-        <!-- Social Media + Copyright -->
-        <div class="row align-items-center text-center">
-            <div class="col-md-6">
-                <p class="mb-0 text-center">© 2025 PEP TECHNOLOGY. All Rights Reserved.</p>
-                <span>Design By <a href="https://trade4export.com/">Trade4Export</a></span>
-            </div>
-            <div class="col-md-6">
-                <div class="d-flex justify-content-center justify-content-md-end gap-3">
-                    <a href="#"><i class="bi bi-facebook fs-5"></i></a>
-                    <a href="#"><i class="bi bi-instagram fs-5"></i></a>
-                    <a href="#"><i class="bi bi-whatsapp fs-5"></i></a>
-                    <a href="#"><i class="bi bi-linkedin fs-5"></i></a>
+        <!-- Copyright -->
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom text-light" href="#">Shree Chamunda Bags</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a class="border-bottom text-light" href="https://trade4export.com">Trade4Export</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</footer>
+    <!-- Footer End -->
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="assets/js/script.js"></script>
-    <!-- bootstrap js  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Submenu Toggle Script -->
+    <script>
+        document.querySelector(".toggle-submenu")?.addEventListener("click", function() {
+            const submenu = document.querySelector(".submenu");
+            submenu?.classList.toggle("d-none");
+        });
+    </script>
 </body>
 
 </html>
-
-

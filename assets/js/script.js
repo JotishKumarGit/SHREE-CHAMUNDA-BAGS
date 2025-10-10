@@ -26,3 +26,26 @@
     return false; // Prevent form from submitting normally
   }
 
+// Enquiry modal js go to whatsapp
+ document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const number = document.getElementById("number").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const whatsappNumber = "6381280180";
+
+    const text = `Enquiry Form Submission:%0A
+Name: ${name}%0A
+Email: ${email}%0A
+Phone: ${number}%0A
+Subject: ${subject}%0A
+Message: ${message}`;
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, '_blank');
+  });
