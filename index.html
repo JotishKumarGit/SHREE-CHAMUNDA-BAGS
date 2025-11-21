@@ -110,9 +110,10 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="agro_packing.php">AGRO PACKING</a></li>
-                            <li><a class="dropdown-item" href="hawder_packing.php">HAWDER PACKING</a></li>
+                            <li><a class="dropdown-item" href="hawder_packing.php">CLEXA HAR BAG</a></li>
                             <li><a class="dropdown-item" href="agro_packing.php">TEA PACKING</a></li>
                             <li><a class="dropdown-item" href="agro_packing.php">SPICES PACKING</a></li>
+                            <li><a class="dropdown-item" href="DOUBLE_HATHI_BAG.php">DOUBLE HATHI BAG</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -344,18 +345,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Product 4: HAWDER_PACKING -->
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="product-card">
-                        <img src="img/hawder_pack.png" alt="Tea Packing Bags">
-                        <div class="product-card-body">
-                            <h5>HAWDER PACKING</h5>
-                            <button class="btn btn-primary">
-                                <a class="text-white text-decoration-none" href="tea_packing.php">View More</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- Product 5: CLEXA HAR BAG -->
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-card">
@@ -446,6 +436,89 @@
         </div>
     </section>
     <!-- end faq -->
+
+    <!-- collections  -->
+<style>
+    .collection-card {
+        height: 260px;
+        border-radius: 15px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition: all 0.4s ease;
+        position: relative;
+    }
+
+    .collection-card img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .collection-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .collection-card:hover img {
+        transform: scale(1.12);
+    }
+
+    /* Subtle overlay */
+    .collection-card:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.1);
+        opacity: 0;
+        transition: 0.4s ease;
+    }
+
+    .collection-card:hover:after {
+        opacity: 1;
+    }
+</style>
+
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="faq-header text-center mb-5">
+            <h2 class="text-primary fw-bold">Our Collections</h2>
+            <p class="text-muted fs-5">
+                Discover a curated collection of timeless bags crafted for every moment.
+                Designed with precision, made to elevate your everyday style.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Collection Cards -->
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_1.png"></div></div>
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_2.png"></div></div>
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_3.jpg"></div></div>
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_4.png"></div></div>
+            
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_5.png"></div></div>
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_6.png"></div></div>
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_7.png"></div></div>
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_8.png"></div></div>
+            
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_9.png"></div></div>
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_10.png"></div></div>
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_11.png"></div></div>
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_12.png"></div></div>
+
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_13.png"></div></div>
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_14.png"></div></div>
+            <div class="col-6 col-md-3"><div class="collection-card"><img src="./img/img_15.png"></div></div>
+
+        </div>
+    </div>
+</div>
+
+    <!-- end collections  -->
+
 
     <!-- contact us  -->
     <section class="contact-section py-5 bg-light" id="contact">
